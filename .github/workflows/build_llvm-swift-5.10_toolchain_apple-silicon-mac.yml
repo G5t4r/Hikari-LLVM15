@@ -27,6 +27,15 @@ jobs:
         run: |
           brew install cmake
           brew install ninja
+
+      - name: Modify Obfuscation.cpp
+        shell: bash
+        run: |
+          echo "Inserting code into Obfuscation.cpp..."
+          sed -i '118a\
+          EnableAntiHooking = false;\
+          EnableAntiClassDump = false;' ./llvm/lib/Transforms/llvm/lib/Transforms/Obfuscation.cpp    
+          echo "Inserting code into Obfuscation.cpp done!!!"
       
       - name: Build
         shell: bash
