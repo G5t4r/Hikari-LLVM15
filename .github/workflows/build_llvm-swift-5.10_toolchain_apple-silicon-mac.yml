@@ -33,6 +33,7 @@ jobs:
         run: |
           echo "Inserting code into Obfuscation.cpp..."
           pwd
+          ls -al
           sed -i '' '118a\
           	EnableAntiHooking = false;\
           	EnableAntiClassDump = false;\
