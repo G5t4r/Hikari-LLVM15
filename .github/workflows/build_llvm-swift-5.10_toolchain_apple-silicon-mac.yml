@@ -34,9 +34,10 @@ jobs:
           echo "Inserting code into Obfuscation.cpp..."
           pwd
           sed -i '' '118a\
-          EnableAntiHooking = false;\
-          EnableAntiClassDump = false;\'
-          EnableAntiHooking = false\' ./llvm/lib/Transforms/llvm/lib/Transforms/Obfuscation/Obfuscation.cpp    
+          	EnableAntiHooking = false;\
+          	EnableAntiClassDump = false;\
+          	EnableAntiHooking = false;\
+          	' ./llvm/lib/Transforms/llvm/lib/Transforms/Obfuscation/Obfuscation.cpp    
           echo "Inserting code into Obfuscation.cpp done!!!"
       
       - name: Build
