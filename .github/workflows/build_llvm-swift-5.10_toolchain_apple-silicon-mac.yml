@@ -36,7 +36,7 @@ jobs:
           ls -al
           sed -i '' '118a\
           	EnableAntiHooking = false;\
-          	EnableAntiClassDump = false;\
+          	EnableAntiClassDump = true;\
           	EnableAntiHooking = false;\
           	' ./llvm/lib/Transforms/Obfuscation/Obfuscation.cpp    
           echo "Inserting code into Obfuscation.cpp done!!!"
